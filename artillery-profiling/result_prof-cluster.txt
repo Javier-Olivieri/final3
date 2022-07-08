@@ -1,0 +1,233 @@
+Statistical profiling result from cluster-v8.log, (4301 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   4178   97.1%          C:\WINDOWS\SYSTEM32\ntdll.dll
+    120    2.8%          C:\Program Files\nodejs\node.exe
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      3    0.1%  100.0%  LazyCompile: *resolve path.js:145:10
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      3    0.1%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+      6    0.1%  200.0%  GC
+   4298   99.9%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   4178   97.1%  C:\WINDOWS\SYSTEM32\ntdll.dll
+
+    120    2.8%  C:\Program Files\nodejs\node.exe
+     83   69.2%    C:\Program Files\nodejs\node.exe
+     21   25.3%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:969:18
+     21  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1022:37
+     21  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1077:37
+     21  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:921:33
+     10   12.0%      LazyCompile: ~realpathSync fs.js:1718:22
+      9   90.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:348:20
+      8   88.9%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:339:17
+      6   75.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:355:23
+      2   25.0%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:293:20
+      1   11.1%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:449:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:801:35
+      1   10.0%        LazyCompile: ~defaultResolve internal/modules/esm/resolve.js:747:24
+      1  100.0%          LazyCompile: ~resolve internal/modules/esm/loader.js:83:16
+      1  100.0%            LazyCompile: ~getModuleJob internal/modules/esm/loader.js:240:21
+      8    9.6%      LazyCompile: ~stat internal/modules/cjs/loader.js:133:14
+      4   50.0%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:339:17
+      4  100.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:355:23
+      2   50.0%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:293:20
+      2   50.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:449:28
+      4   50.0%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:449:28
+      4  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:801:35
+      3   75.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:709:24
+      1   25.0%            LazyCompile: ~cjsPreparseModuleExports internal/modules/esm/translators.js:221:34
+      4    4.8%      C:\Program Files\nodejs\node.exe
+      1   25.0%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:245:21
+      1  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:276:26
+      1  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:396:17
+      1   25.0%        LazyCompile: ~prepareStackTrace internal/errors.js:59:27
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1  100.0%            LazyCompile: ~addCodeToName internal/errors.js:303:23
+      1   25.0%        LazyCompile: ~fromString C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\utils.js:369:22
+      1  100.0%          LazyCompile: ~ns C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\utils.js:347:12
+      1  100.0%            LazyCompile: ~measureRoundTripTime C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\sdam\monitor.js:280:30
+      1   25.0%        LazyCompile: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\@mapbox\node-pre-gyp\lib\util\versioning.js:23:36
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1  100.0%            Eval: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\@mapbox\node-pre-gyp\lib\util\versioning.js:1:1
+      3    3.6%      LazyCompile: ~openSync fs.js:489:18
+      3  100.0%        LazyCompile: ~readFileSync fs.js:391:22
+      3  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1077:37
+      3  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:921:33
+      3    3.6%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      3  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1   33.3%          LazyCompile: ~setupBuffer internal/bootstrap/node.js:300:21
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1   33.3%          Eval: ~<anonymous> internal/crypto/keygen.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1   33.3%          Eval: ~<anonymous> internal/child_process.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      2    2.4%      LazyCompile: ~isatty tty.js:42:16
+      1   50.0%        LazyCompile: ~useColors C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\debug\src\node.js:75:19
+      1  100.0%          LazyCompile: ~createDebug C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\debug\src\debug.js:63:21
+      1  100.0%            Eval: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\express-session\index.js:1:1
+      1   50.0%        LazyCompile: ~useColors C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\connect-mongo\node_modules\debug\src\node.js:155:19
+      1  100.0%          LazyCompile: ~createDebug C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\connect-mongo\node_modules\debug\src\common.js:60:22
+      1  100.0%            Eval: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\connect-mongo\build\main\lib\MongoStore.js:1:1
+      2    2.4%      LazyCompile: ~deserializeObject C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\parser\deserializer.js:65:27
+      1   50.0%        LazyCompile: ~deserializeObject C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\parser\deserializer.js:65:27
+      1  100.0%          LazyCompile: ~deserializeObject C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\parser\deserializer.js:65:27
+      1  100.0%            LazyCompile: ~deserialize C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\parser\deserializer.js:36:21
+      1   50.0%        LazyCompile: ~deserialize C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\parser\deserializer.js:36:21
+      1  100.0%          LazyCompile: ~deserialize C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\bson.js:162:21
+      1  100.0%            LazyCompile: ~parse C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\cmap\commands.js:577:10
+      1    1.2%      LazyCompile: ~tryStatSync fs.js:354:21
+      1  100.0%        LazyCompile: ~readFileSync fs.js:391:22
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1077:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:921:33
+      1    1.2%      LazyCompile: ~resolveBSONOptions C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\bson.js:53:28
+      1  100.0%        LazyCompile: ~resolveOptions C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\utils.js:739:24
+      1  100.0%          LazyCompile: ~createIndex C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\collection.js:254:16
+      1  100.0%            LazyCompile: ~setAutoRemove C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\connect-mongo\build\main\lib\MongoStore.js:138:18
+      1    1.2%      LazyCompile: ~readSync fs.js:577:18
+      1  100.0%        LazyCompile: ~tryReadSync fs.js:379:21
+      1  100.0%          LazyCompile: ~readFileSync fs.js:391:22
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1077:37
+      1    1.2%      LazyCompile: ~read internal/modules/package_json_reader.js:16:14
+      1  100.0%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:245:21
+      1  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:276:26
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1077:37
+      1    1.2%      LazyCompile: ~parse C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\cmap\commands.js:577:10
+      1  100.0%        LazyCompile: ~onMessage C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\cmap\connection.js:152:14
+      1  100.0%          LazyCompile: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\cmap\connection.js:63:44
+      1  100.0%            LazyCompile: ~emit events.js:325:44
+      1    1.2%      LazyCompile: ~measureRoundTripTime C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\sdam\monitor.js:280:30
+      1  100.0%        LazyCompile: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\sdam\monitor.js:296:44
+      1  100.0%          LazyCompile: ~listOnTimeout internal/timers.js:503:25
+      1  100.0%            LazyCompile: ~processTimers internal/timers.js:483:25
+      1    1.2%      LazyCompile: ~maybeCacheSourceMap internal/source_map/source_map_cache.js:62:29
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1022:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1077:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:921:33
+      1    1.2%      LazyCompile: ~listOnTimeout internal/timers.js:503:25
+      1  100.0%        LazyCompile: ~processTimers internal/timers.js:483:25
+      1    1.2%      LazyCompile: ~initSearchParams internal/url.js:711:26
+      1  100.0%        LazyCompile: ~URLSearchParams internal/url.js:143:14
+      1  100.0%          LazyCompile: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\connection_string.js:72:39
+      1  100.0%            LazyCompile: ~onresolve dns.js:198:19
+      1    1.2%      LazyCompile: ~get internal/url.js:611:8
+      1  100.0%        LazyCompile: ~getPackageScopeConfig internal/modules/esm/resolve.js:137:31
+      1  100.0%          LazyCompile: ~getPackageType internal/modules/esm/resolve.js:568:24
+      1  100.0%            LazyCompile: ~defaultGetFormat internal/modules/esm/get_format.js:39:26
+      1    1.2%      LazyCompile: ~from buffer.js:306:28
+      1  100.0%        LazyCompile: ~ensureBuffer C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\ensure_buffer.js:15:22
+      1  100.0%          LazyCompile: ~Binary C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\binary.js:19:20
+      1  100.0%            LazyCompile: ~deserializeObject C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\parser\deserializer.js:65:27
+      1    1.2%      LazyCompile: ~createSecureContext _tls_common.js:94:59
+      1  100.0%        LazyCompile: ~connect _tls_wrap.js:1566:35
+      1  100.0%          LazyCompile: ~makeConnection C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\cmap\connect.js:241:24
+      1  100.0%            LazyCompile: ~connect C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\cmap\connect.js:30:17
+      1    1.2%      LazyCompile: ~connect C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\cmap\connect.js:30:17
+      1  100.0%        LazyCompile: ~measureRoundTripTime C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\sdam\monitor.js:280:30
+      1  100.0%          LazyCompile: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\sdam\monitor.js:266:39
+      1  100.0%            LazyCompile: ~listOnTimeout internal/timers.js:503:25
+      1    1.2%      LazyCompile: ~arrayEach C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\lodash\lodash.js:525:21
+      1  100.0%        Eval: ~runInContext C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\lodash\lodash.js:1448:44
+      1  100.0%          Eval: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\lodash\lodash.js:9:11
+      1  100.0%            Eval: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\lodash\lodash.js:1:1
+      1    1.2%      LazyCompile: ~WriteStream internal/fs/streams.js:230:21
+      1  100.0%        LazyCompile: ~createWriteStream fs.js:2074:27
+      1  100.0%          LazyCompile: ~_createStream C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\winston\lib\winston\transports\file.js:542:16
+      1  100.0%            LazyCompile: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\winston\lib\winston\transports\file.js:396:15
+      1    1.2%      LazyCompile: ~URLSearchParams internal/url.js:143:14
+      1  100.0%        LazyCompile: ~onParseComplete internal/url.js:239:25
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1  100.0%            LazyCompile: ~URL internal/url.js:327:14
+      1    1.2%      LazyCompile: ~URLImpl C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb-connection-string-url\node_modules\whatwg-url\lib\URL-impl.js:7:14
+      1  100.0%        LazyCompile: ~exports.setup C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb-connection-string-url\node_modules\whatwg-url\lib\URL.js:49:17
+      1  100.0%          LazyCompile: ~URL C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb-connection-string-url\node_modules\whatwg-url\lib\URL.js:90:16
+      1  100.0%            LazyCompile: ~URLWithoutHost C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb-connection-string-url\lib\index.js:74:1
+      1    1.2%      LazyCompile: ~TLSSocket._start _tls_wrap.js:935:38
+      1  100.0%        LazyCompile: ~onceWrapper events.js:477:21
+      1  100.0%          LazyCompile: ~emit events.js:325:44
+      1  100.0%            LazyCompile: ~afterConnect net.js:1108:22
+      1    1.2%      LazyCompile: ~Schema C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongoose\lib\schema.js:95:16
+      1  100.0%        Script: ~<anonymous> file:///C:/Users/ale_m/OneDrive/Documents/Coderhouse/Backend/Entregables/trabajo-final/src/contenedores/mongooseModels/ProductoModel.js:1:1
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1    1.2%      LazyCompile: ~NodeError internal/errors.js:257:16
+      1  100.0%        LazyCompile: ~onParseError internal/url.js:258:22
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1  100.0%            LazyCompile: ~URL internal/url.js:327:14
+      1    1.2%      LazyCompile: ~Module._load internal/modules/cjs/loader.js:709:24
+      1  100.0%        LazyCompile: ~Module.require internal/modules/cjs/loader.js:949:36
+      1  100.0%          LazyCompile: ~require internal/modules/cjs/helpers.js:87:31
+      1  100.0%            Eval: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\q\q.js:1:1
+      1    1.2%      LazyCompile: ~Module._extensions..json internal/modules/cjs/loader.js:1102:39
+      1  100.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:921:33
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:709:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:949:36
+      1    1.2%      LazyCompile: ~Long.comp C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\long.js:312:36
+      1  100.0%        LazyCompile: ~Long.lessThanOrEqual C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\long.js:517:47
+      1  100.0%          LazyCompile: ~deserializeObject C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\parser\deserializer.js:65:27
+      1  100.0%            LazyCompile: ~deserializeObject C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\bson\lib\parser\deserializer.js:65:27
+      1    1.2%      LazyCompile: ~Gauge C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\gauge\index.js:19:16
+      1  100.0%        Eval: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\npmlog\log.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1022:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1077:37
+      1    1.2%      LazyCompile: ~ChildProcess.spawn internal/child_process.js:333:40
+      1  100.0%        LazyCompile: ~spawn child_process.js:572:15
+      1  100.0%          LazyCompile: ~spawnWithSignal child_process.js:713:25
+      1  100.0%            LazyCompile: ~fork child_process.js:76:14
+      1    1.2%      LazyCompile: *readPackageScope internal/modules/cjs/loader.js:276:26
+      1  100.0%        LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1077:37
+      1  100.0%          LazyCompile: ~Module.load internal/modules/cjs/loader.js:921:33
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:709:24
+      1    1.2%      Eval: ~<anonymous> internal/timers.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1  100.0%            Eval: ~<anonymous> timers.js:1:1
+      1    1.2%      Eval: ~<anonymous> internal/idna.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1  100.0%            Eval: ~<anonymous> url.js:1:1
+      1    1.2%      Eval: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\@dabh\diagnostics\adapters\process.env.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1022:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1077:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:921:33
+      2    1.7%    LazyCompile: ~realpathSync fs.js:1718:22
+      2  100.0%      LazyCompile: ~toRealPath internal/modules/cjs/loader.js:348:20
+      2  100.0%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:339:17
+      2  100.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:355:23
+      2  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:449:28
+      2    1.7%    LazyCompile: ~processTimers internal/timers.js:483:25
+      2    1.7%    LazyCompile: ~measureRoundTripTime C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\sdam\monitor.js:280:30
+      2  100.0%      LazyCompile: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\sdam\monitor.js:296:44
+      2  100.0%        LazyCompile: ~listOnTimeout internal/timers.js:503:25
+      2  100.0%          LazyCompile: ~processTimers internal/timers.js:483:25
+      2    1.7%    LazyCompile: ~fromString C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\utils.js:369:22
+      2  100.0%      LazyCompile: ~ns C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\utils.js:347:12
+      1   50.0%        LazyCompile: ~measureRoundTripTime C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\sdam\monitor.js:280:30
+      1  100.0%          LazyCompile: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\sdam\monitor.js:296:44
+      1  100.0%            LazyCompile: ~listOnTimeout internal/timers.js:503:25
+      1   50.0%        LazyCompile: ~<anonymous> C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\cmap\connect.js:78:43
+      1  100.0%          LazyCompile: ~prepareHandshakeDocument C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\cmap\connect.js:139:34
+      1  100.0%            LazyCompile: ~performInitialHandshake C:\Users\ale_m\OneDrive\Documents\Coderhouse\Backend\Entregables\trabajo-final\node_modules\mongodb\lib\cmap\connect.js:62:33
+      2    1.7%    LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:449:28
+      2  100.0%      LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:801:35
+      2  100.0%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:709:24
+      2  100.0%          LazyCompile: ~Module.require internal/modules/cjs/loader.js:949:36
+      2  100.0%            LazyCompile: ~require internal/modules/cjs/helpers.js:87:31
